@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recz</title>
+    <style>
+        #heading {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #0c7940;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .anc-head {
+            display: flex;
+            justify-content: space-between;
+            width: 20%;
+        }
+
+        .anc-head>a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .searchbar {
+            background-color: white;
+            height: 30px;
+            border-radius: 20px;
+            padding: 5px;
+            padding-left: 10px;
+        }
+
+        #search {
+            border: none;
+            outline: none;
+            height: 25px;
+            color: #0c7940;
+            padding-left: 5px;
+        }
+
+        .searchbtn {
+            background-color: #0c7940;
+            color: white;
+            border: none;
+            height: 25px;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 5px 5px;
+            margin-left: 5px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            background: url("https://i.ibb.co/K7CJnWQ/mesut-kaya-e-Ocyhe5-9s-Q-unsplash.jpg") #0c7940 no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+        }
+
+        #aboutus {
+            background: url("https://i.ibb.co/K7CJnWQ/mesut-kaya-e-Ocyhe5-9s-Q-unsplash.jpg") #0c7940 no-repeat center center/cover;
+            height: 100vh;
+        }
+
+        #contactus {
+            background: url("https://i.ibb.co/K7CJnWQ/mesut-kaya-e-Ocyhe5-9s-Q-unsplash.jpg") #0c7940 no-repeat center center/cover;
+            height: 100vh;
+        }
+
+        .mainhead {
+            margin-left: 10%;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            color: white;
+            width: 40%;
+            text-align: left;
+        }
+
+        .mainhead1 {
+            margin-left: 10%;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+            color: white;
+            text-align: left;
+            padding-top: 40px;
+        }
+
+        .heading {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: auto;
+        }
+
+        .head1 {
+            width: 30%;
+            margin: 40px 0 0 0 !important;
+        }
+
+        .bookbtn {
+            color: white;
+            border: none;
+            height: 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            background: rgba(12, 121, 64, 0.55);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(6.5px);
+            -webkit-backdrop-filter: blur(6.5px);
+            text-transform: uppercase;
+        }
+
+        .mainhead>p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            width: 60%;
+        }
+
+        .aboutdesc {
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 10px;
+            width: 80vw;
+            padding: 20px;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 10%;
+            width: 70%;
+        }
+
+        .team-member {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 0 20px;
+        }
+
+        .team-member1 {
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 10px;
+            padding: 20px 30px;
+            margin: 10px;
+        }
+
+        .cont-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            margin-left: 10%;
+            width: 70%;
+        }
+
+        .mrgn {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        form>input {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        form>input[type="submit"] {
+            background-color: #0c7940;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .medias {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .medias>a {
+            margin-bottom: 10px !important;
+            color: #fff;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        #searchresult {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            height: 90vh;
+            overflow-y: scroll;
+        }
+
+        .card {
+            background: white;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="">
+        <a id="heading" href="">Travel Recz</a>
+        <div class="anc-head">
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="searchbar">
+            <input type="text" id="search" placeholder="Enter a destination" />
+            <button class="searchbtn" id="searchbtn">Search</button>
+            <button class="searchbtn" id="clearbtn">Clear</button>
+        </div>
+    </nav>
+    <div id="main">
+        <div class="mainhead">
+            <h1 class="heading">Explore Dream Destination</h1>
+            <p>It encourages you to explorion of unfamiliar places, cultures, and landscapes, while pursuing the desired
+                destination that captivates the heart and ignites a sense of wonder.</p>
+            <button class="bookbtn">Book Now</button>
+        </div>
+    </div>
+    <div id="aboutus">
+        <div class="mainhead1">
+            <h1 class="heading">About us</h1>
+            <p class="aboutdesc">Travel Recz is a travel recommendation website that provides you with the best travel
+                destinations
+                around the world. We provide you with the best travel recommendations based on your preferences and
+                interests. </br> Our goal is to help you explore the world and create unforgettable memories. So,
+                whether you
+                are looking for a relaxing beach vacation, an adventurous mountain trek, or a cultural city tour, we
+                have
+                got you covered. So, start planning your next adventure with Travel Recz and make your travel dreams
+                come
+                true! </br>
+                Feel free to contact us for any queries or suggestions. We are always here to help you plan your
+            </p>
+            <div class="team">
+                <h1 class="heading head1">Our Team</h1>
+                <div class="team-member">
+                    <div class="team-member1">
+                        <h2>John Doe</h2>
+                        <p>CEO</p>
+                    </div>
+                    <div class="team-member1">
+                        <h2>Jane Doe</h2>
+                        <p>COO</p>
+                    </div>
+                    <div class="team-member1">
+                        <h2>John Smith</h2>
+                        <p>CTO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contactus">
+        <div class=" mainhead1">
+            <div class="cont-container">
+                <div class="mrgn">
+                    <h1 class="heading">Contact Us</h1>
+                </div>
+                <div class="mrgn">
+                    <form>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="medias">
+        <a href="#"><img width="50" height="50" src="https://img.icons8.com/ios/50/facebook-new.png"></a>
+        <a href="#"><img width="50" height="50" src="https://img.icons8.com/ios/50/twitter--v1.png"
+                alt="twitter--v1" /></a>
+        <a href="#"><img width="50" height="50" src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin" /></a>
+    </div>
+    <div id="searchresult">
+
+    </div>
+    <script src="./travel_recommendation.js"></script>
+</body>
+
+</html>
